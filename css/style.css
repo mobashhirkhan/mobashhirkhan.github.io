@@ -667,6 +667,24 @@ a:hover {
   color: #fff;
 }
 
+.download-btn {
+  margin-top: 20px;
+}
+
+.btn-primary {
+  background-color: #0078ff;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+
 /*======================================
 //--//-->   ABOUT
 ======================================*/
@@ -773,9 +791,33 @@ a:hover {
   -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
   background-color: #fff;
+  cursor: pointer; /* Add cursor pointer to indicate clickable */
 }
 
-.work-box:hover img {
+.work-box .project-info {
+  position: relative;
+  text-align: center; /* Center-align the content */
+}
+
+.work-box .project-name {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent background to improve readability */
+  padding: 1.5rem;
+  text-align: center;
+  font-size: 1.5rem;
+  margin: 0;
+}
+
+.work-box .project-languages {
+  margin: 0;
+  font-size: 1rem;
+  color: black; /* Adjust color as needed */
+}
+
+.work-box:hover .work-img img {
   -webkit-transform: scale(1.3);
   transform: scale(1.3);
 }
@@ -783,6 +825,7 @@ a:hover {
 .work-img {
   display: block;
   overflow: hidden;
+  position: relative;
 }
 
 .work-img img {
@@ -790,12 +833,17 @@ a:hover {
 }
 
 .work-content {
+  display: none; /* Initially hide project descriptions */
   padding: 2rem 3% 1rem 4%;
+}
+
+.work-content.active {
+  display: block; /* Show project descriptions when active class is present */
 }
 
 .work-content .w-more {
   color: #4e4e4e;
-  font-size: .8rem;
+  font-size: 0.8rem;
 }
 
 .work-content .w-more .w-ctegory {
@@ -813,12 +861,21 @@ a:hover {
 }
 
 .work-content .w-like .num-like {
-  font-size: .7rem;
+  font-size: 0.7rem;
 }
 
 .w-title {
   font-size: 1.2rem;
 }
+
+.description {
+  font-size: large;
+}
+
+.w-title {
+  font-size: large;
+}
+
 
 /*======================================
 //--//-->   TESTIMONIALS
